@@ -1,0 +1,2 @@
+application.name=WebTrale
+application.version=0.5.1

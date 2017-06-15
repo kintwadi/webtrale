@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link href="__wt.css" rel="stylesheet" type="text/css"/>
+    <base target="viewpan"/>
+    <script type="text/javascript">
+      function init() {
+        if (!window.parent._wt_flag_islocal) {
+          document.getElementById("local-control").style.display = "none";
+        }
+        document.getElementById('q').focus();
+      }
+      function _onsubmit() {
+        document.getElementById('q').select();
+        if (!document.getElementById('cb-new-window').checked) {
+          window.parent.frames["viewpan"].document.body.innerHTML = "<h2>Parsing...</h2>"; 
+        }
+        return true;
+      }
+      function enlargeTypeHierarchy() {
+          parent.document.getElementsByTagName('frameset')[2].rows = '90%,*,3%';
+      }
+      function minimizeTypeHierarchy() {
+          parent.document.getElementsByTagName('frameset')[2].rows = '0%,*,3%';
+      }
+      function enlargeTestItems() {
+          parent.document.getElementsByTagName('frameset')[2].rows = '0%,50%,50%';
+      }
+      function minimizeTestItems() {
+          parent.document.getElementsByTagName('frameset')[2].rows = '0%,*,0%';
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <div id="sentence-block">
+      <form action="rec" onsubmit="_onsubmit()">
+        <div class="label">Sentence</div>
+        <input type="text" id="q" name="q" accesskey="s"/>
+        <div class="label">Constraint</div>
+        <input type="text" id="constraint" name="constraint" size="10" accesskey="m"/>
+        <input type="submit" id="rec-submit" value="Parse"/>
+        <br></br>
+        <div class="label">Test Items</div>
+        <input type="button" onclick="enlargeTestItems()" id="showtestitems" value="Show" />
+        <input type="button" onclick="minimizeTestItems()" id="hidetestitems" value="Hide" />
+        <br></br>
+        <div class="label">Type Hierarchy</div>
+        <input type="button" onclick="enlargeTypeHierarchy()" id="showtypehierarchy" value="Show" />
+        <input type="button" onclick="minimizeTypeHierarchy()" id="hidetypehierarchy" value="Hide" />
+        <! --  -->
+        <br></br>
+        <input type="checkbox" accesskey="w"
+          onchange="this.form.target = (this.checked ? '_blank' : 'viewpan')"
+          id="cb-new-window"/>
+        <span id="cb-new-window-caption">open result in a new window</span>
+      </form>
+    </div>
+    <div id="local-control">
+      <a href="quit">Shutdown</a>
+    </div>
+  </body>
+</html>

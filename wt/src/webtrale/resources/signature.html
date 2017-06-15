@@ -1,0 +1,2139 @@
+<html>
+
+<style>
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+</style>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>signature</title>
+<link href="__fs.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="__fs.js"></script><script type="text/javascript" src="__wz_jsgraphics.js"></script><script src="./d3.v3.min.js"></script>
+</head>
+
+
+<body onload="init_view()">
+<div id="viewSelectorHolder">
+<div id="viewSelector">
+<span id="tbuttons"><span class="tbutton" onclick="tb_select(this)">1</span><span class="tbutton" onclick="tb_select(this)">2</span><span class="tbutton" onclick="tb_select(this)">3</span><span class="tbutton" onclick="tb_select(this)">4</span><span class="tbutton" onclick="tb_select(this)">5</span><span class="tbutton" onclick="tb_select(this)">6</span><span class="tbutton" onclick="tb_select(this)">7</span><span class="tbutton" onclick="tb_select(this)">8</span><span class="tbutton" onclick="tb_select(this)">9</span><span class="tbutton" onclick="tb_select(this)">10</span><span class="tbutton" onclick="tb_select(this)">11</span><span class="tbutton" onclick="tb_select(this)">12</span><span class="tbutton" onclick="tb_select(this)">13</span><span class="tbutton" onclick="tb_select(this)">14</span><span class="tbutton" onclick="tb_select(this)">15</span><span class="tbutton" onclick="tb_select(this)">16</span><span class="tbutton" onclick="tb_select(this)">17</span><span class="tbutton" onclick="tb_select(this)">18</span><span class="tbutton" onclick="tb_select(this)">19</span><span class="tbutton" onclick="tb_select(this)">20</span><span class="tbutton" onclick="tb_select(this)">21</span><span class="tbutton" onclick="tb_select(this)">22</span><span class="tbutton" onclick="tb_select(this)">23</span><span class="tbutton" onclick="tb_select(this)">24</span><span class="tbutton" onclick="tb_select(this)">25</span><span class="tbutton" onclick="tb_select(this)">26</span><span class="tbutton" onclick="tb_select(this)">27</span><span class="tbutton" onclick="tb_select(this)">28</span><span class="tbutton" onclick="tb_select(this)">29</span><span class="tbutton" onclick="tb_select(this)">30</span><span class="tbutton" onclick="tb_select(this)">31</span><span class="tbutton" onclick="tb_select(this)">32</span><span class="tbutton" onclick="tb_select(this)">33</span><span class="tbutton" onclick="tb_select(this)">34</span><span class="tbutton" onclick="tb_select(this)">35</span><span class="tbutton" onclick="tb_select(this)">36</span><span class="tbutton" onclick="tb_select(this)">37</span><span class="tbutton" onclick="tb_select(this)">38</span><span class="tbutton" onclick="tb_select(this)">39</span><span class="tbutton" onclick="tb_select(this)">40</span><span class="tbutton" onclick="tb_select(this)">41</span><span class="tbutton" onclick="tb_select(this)">42</span><span class="tbutton" onclick="tb_select(this)">43</span><span class="tbutton" onclick="tb_select(this)">44</span><span class="tbutton" onclick="tb_select(this)">45</span><span class="tbutton" onclick="tb_select(this)">46</span><span class="tbutton" onclick="tb_select(this)">47</span><span class="tbutton" onclick="tb_select(this)">48</span><span class="tbutton" onclick="tb_select(this)">49</span><span class="tbutton" onclick="tb_select(this)">50</span><span class="tbutton" onclick="tb_select(this)">51</span><span class="tbutton" onclick="tb_select(this)">52</span><span class="tbutton" onclick="tb_select(this)">53</span><span class="tbutton" onclick="tb_select(this)">54</span><span class="tbutton" onclick="tb_select(this)">55</span><span class="tbutton" onclick="tb_select(this)">56</span><span class="tbutton" onclick="tb_select(this)">57</span><span class="tbutton" onclick="tb_select(this)">58</span><span class="tbutton" onclick="tb_select(this)">59</span><span class="tbutton" onclick="tb_select(this)">60</span><span class="tbutton" onclick="tb_select(this)">61</span><span class="tbutton" onclick="tb_select(this)">62</span><span class="tbutton" onclick="tb_select(this)">63</span><span class="tbutton" onclick="tb_select(this)">64</span><span class="tbutton" onclick="tb_select(this)">65</span><span class="tbutton" onclick="tb_select(this)">66</span><span class="tbutton" onclick="tb_select(this)">67</span><span class="tbutton" onclick="tb_select(this)">68</span><span class="tbutton" onclick="tb_select(this)">69</span><span class="tbutton" onclick="tb_select(this)">70</span><span class="tbutton" onclick="tb_select(this)">71</span><span class="tbutton" onclick="tb_select(this)">72</span><span class="tbutton" onclick="tb_select(this)">73</span></span><span><span id="tbVisibilityControlButton" class="tbutton" onclick="tb_show_hide(event)" style="color:black;">&times;
+                                </span></span>
+</div>
+</div>
+<div id="structureViewHolder"></div>
+<div id="canvas"></div>
+<div id="structures" style="display:none">
+<div id="struct-1">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">signature</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-2">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">type_hierarchy</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-3">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">bot</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-4">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">list</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-5">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">ne_list</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd</td><td class="f-value"><span class="species">bot</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">tl</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-6">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">e_list</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-7">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">yes_no</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-8">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">yes</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-9">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">no</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-10">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">sign</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-11">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">word</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-12">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">gap</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-13">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">phrase</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd_dtr</td><td class="f-value"><span class="species">sign</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">non_hd_dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-14">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">stand_ph</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd_dtr</td><td class="f-value"><span class="species">sign</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">non_hd_dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-15">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">hd_spr_ph</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd_dtr</td><td class="f-value"><span class="species">sign</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">non_hd_dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-16">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">hd_comp_ph</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd_dtr</td><td class="f-value"><span class="species">sign</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">non_hd_dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-17">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">sai_ph</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd_dtr</td><td class="f-value"><span class="species">sign</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">non_hd_dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-18">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">hd_c_ph</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd_dtr</td><td class="f-value"><span class="species">sign</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">non_hd_dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-19">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">hd_fill_ph</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd_dtr</td><td class="f-value"><span class="species">sign</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">non_hd_dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-20">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">top_ph</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd_dtr</td><td class="f-value"><span class="species">sign</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">non_hd_dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-21">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">question</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">phon</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">loc</td><td class="f-value"><span class="species">loc</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">wh</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">gaps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">hd_dtr</td><td class="f-value"><span class="species">sign</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">non_hd_dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">dtrs</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-22">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">loc</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">syn</td><td class="f-value"><span class="species">cat</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">sem</td><td class="f-value"><span class="species">sem</span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-23">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">cat</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">pos</td><td class="f-value"><span class="species">pos</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">spr</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">comps</td><td class="f-value">
+<table>
+<tr>
+<td class="ls-bra">&lt;</td><td class="ls-ket">&gt;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-24">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">pos</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-25">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">agr_pos</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">agr</td><td class="f-value"><span class="species">agr_none</span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-26">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">d</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">agr</td><td class="f-value"><span class="species">agr_none</span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-27">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">n</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">case</td><td class="f-value"><span class="species">case</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">agr</td><td class="f-value"><span class="species">agr_none</span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-28">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">v</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">aux</td><td class="f-value"><span class="species">yes_no</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">vform</td><td class="f-value"><span class="species">vform</span></td>
+</tr>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)">agr</td><td class="f-value"><span class="species">agr_none</span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-29">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">a</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-30">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">p</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-31">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">c</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-32">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">agr_none</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-33">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">none</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-34">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">agr</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-35">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">thd_sg</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-36">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">non_thd_sg</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-37">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">fst_sg</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-38">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">sec_sg</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-39">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">fst_pl</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-40">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">sec_pl</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-41">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">thd_pl</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-42">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">case</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-43">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">subj</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-44">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">plain</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-45">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">nom</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-46">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">obj</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-47">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">acc</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-48">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">vform</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-49">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">fin</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-50">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">non_fin</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-51">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">bare</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-52">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">perf</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-53">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">prog</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-54">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">to_inf</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-55">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">sem</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-56">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">ref</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-57">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">living_being</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-58">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">person</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-59">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">animal</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-60">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">thing</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-61">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">event</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-62">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">det_sem</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-63">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">proposition</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-64">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">location</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-65">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">direction</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-66">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">goal</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-67">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">idiom</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-68">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">idiom_it</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-69">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">idiom_all</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-70">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">idiom_hell</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-71">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">idiom_break</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-72">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">idiom_loose</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div id="struct-73">
+<table class="fs-otab">
+<tr>
+<td class="fs-otab-lbracket">&nbsp;</td><td class="fs-otab-m">
+<table class="fs-itab">
+<tr>
+<td class="fs-type" onclick="expand_collapse_fs(this)">.</td>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td class="f-name" onclick="expand_collapse_feat(this)"></td><td class="f-value"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td class="fs-otab-rbracket">&nbsp;</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="reentrancies" style="display:none"></div>
+
+
+
+
+
+</body>
+</html>
+

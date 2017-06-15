@@ -1,0 +1,48 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.label {
+  font-family: Helvetica;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+#q {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#rec-submit {
+  float: right;
+}
+
+#sentence-block, #lexicon-block {
+  margin: 15px;
+}
+
+#lexicon-block ul {
+  margin-top:5px;
+}
+
+#cb-new-window {
+  float:left;
+}
+
+#cb-new-window-caption {
+  float:left;
+  width:100px;
+}
+
+#local-control {
+  margin-top: 45px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#local-control a {
+  display:block;
+  clear:left;
+}

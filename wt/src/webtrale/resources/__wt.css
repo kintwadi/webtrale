@@ -1,0 +1,82 @@
+body {
+  padding: 0;
+  margin: 0;
+  /*background-color: #CCCCFF;*/
+  /*background-color: #ececf8;*/
+  /*background-color: #e5e4e2;*/
+  /*background-color: #e6e6ff;*/
+  background-color: #EEFFEF;
+}
+
+.label {
+  font-family: Palatino;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.rulelabel {
+  font-family: Palatino;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+#q {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#rec-submit {
+  float: right;
+}
+
+#sentence-block, #lexicon-block, #rule-block, #signature-block, #testitem-block {
+  margin: 15px;
+}
+
+
+ul.circle {
+	list-style-type: circle;
+}
+
+
+#lexicon-block ul {
+  margin-top:5px;
+}
+
+#rule-block ul {
+  margin-top:5px;
+}
+
+#signature-block ul {
+  margin-top:5px;
+}
+
+#testitem-block ul {
+  margin-top:5px;
+}
+
+#cb-new-window {
+  float:left;
+}
+
+#cb-new-window-caption {
+  float:left;
+  width:100px;
+}
+
+#local-control {
+  margin-top: 45px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#local-control a {
+  display:block;
+  clear:left;
+}
+
+
+
+
+

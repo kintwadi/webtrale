@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>WebTRALE</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <link href="__applet.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="__prototype-1.6.0.2.js"></script>
+        <script type="text/javascript" src="__applet.js"></script>
+    </head>
+    <body>
+        <div id="parse-and-status">
+            <div id="parse-form-label">Sentence</div>
+            <div id="status"><div class="status-pending">Loading...</div></div>
+        </div>
+        <form id="parse-form"
+            onsubmit="try{rec()}catch(e){} return false" action="">
+            <input type="text" id="q" name="q" size="50" disabled="true">
+            <input type="button" id="bthParse" value="Parse" onclick="rec()" disabled="true">
+        </form>
+        <table id="lex-and-trees">
+            <tr><td>
+            <div id="lexicon">
+                <div id="lex-label">Lexicon</div>
+                <div id="lex"></div>
+            </div>
+            </td><td>
+            <div id="trees">
+                <div id="selector-bar"></div>
+                <div id="applet-div">
+                 <!--   <applet id="g"
+                        code="gralej.GralejApplet" archive="lib/gralejApplet.jar,lib/tomato.jar"
+                        mayscript="mayscript"
+                        width="1"
+                        height="1"
+                        /> -->
+                </div>
+            </div>
+            </td></tr></table>
+        </div>
+    </body>
+</html>

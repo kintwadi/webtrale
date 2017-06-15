@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link href="__wt.css" rel="stylesheet" type="text/css"/>
+    <base target="viewpan"/>
+    <script type="text/javascript">
+      function init() {
+        if (!window.parent._wt_flag_islocal) {
+          document.getElementById("local-control").style.display = "none";
+        }
+        document.getElementById('q').focus();
+      }
+      function _onsubmit() {
+        document.getElementById('q').select();
+        if (!document.getElementById('cb-new-window').checked)
+          window.parent.frames[2].document.body.innerHTML = "<h2>Parsing input skdfj ksdfj ksdfj skdfj sdfkj sdfkj sdfkj sdfkj ...</h2>";
+        return true;
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <div id="sentence-block">
+      <form action="rec" onsubmit="_onsubmit()">
+        <div class="label">Sentence</div>
+        <input type="text" id="q" name="q" accesskey="s"/>
+        <input type="submit" id="rec-submit" value="Parse"/>
+        <input type="checkbox" accesskey="w"
+          onchange="this.form.target = (this.checked ? '_blank' : 'viewpan')"
+          id="cb-new-window"/>
+        <span id="cb-new-window-caption">open result in a new window</span>
+      </form>
+    </div>
+    <div id="local-control">
+      <a href="quit">Shutdown</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,929 @@
+<?xml-stylesheet href='__fs-tree-to-html.xsl' type='text/xsl' ?>
+<root>
+<parsechart> no parse chart </parsechart>
+<results count="73">
+<result id="1">
+<view>
+<title>signature</title>
+<fs type="signature">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="2">
+<view>
+<title>type_hierarchy</title>
+<fs type="type_hierarchy">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="3">
+<view>
+<title>bot</title>
+<fs type="bot">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="4">
+<view>
+<title>list</title>
+<fs type="list">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="5">
+<view>
+<title>ne_list</title>
+<fs type="ne_list">
+<f name="hd">
+<fs type="bot" />
+</f>
+<f name="tl">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="6">
+<view>
+<title>e_list</title>
+<fs type="e_list">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="7">
+<view>
+<title>yes_no</title>
+<fs type="yes_no">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="8">
+<view>
+<title>yes</title>
+<fs type="yes">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="9">
+<view>
+<title>no</title>
+<fs type="no">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="10">
+<view>
+<title>sign</title>
+<fs type="sign">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="11">
+<view>
+<title>word</title>
+<fs type="word">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="12">
+<view>
+<title>gap</title>
+<fs type="gap">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="13">
+<view>
+<title>phrase</title>
+<fs type="phrase">
+<f name="hd_dtr">
+<fs type="sign" />
+</f>
+<f name="non_hd_dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="14">
+<view>
+<title>stand_ph</title>
+<fs type="stand_ph">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+<f name="hd_dtr">
+<fs type="sign" />
+</f>
+<f name="non_hd_dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="dtrs">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="15">
+<view>
+<title>hd_spr_ph</title>
+<fs type="hd_spr_ph">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+<f name="hd_dtr">
+<fs type="sign" />
+</f>
+<f name="non_hd_dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="dtrs">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="16">
+<view>
+<title>hd_comp_ph</title>
+<fs type="hd_comp_ph">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+<f name="hd_dtr">
+<fs type="sign" />
+</f>
+<f name="non_hd_dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="dtrs">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="17">
+<view>
+<title>sai_ph</title>
+<fs type="sai_ph">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+<f name="hd_dtr">
+<fs type="sign" />
+</f>
+<f name="non_hd_dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="dtrs">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="18">
+<view>
+<title>hd_c_ph</title>
+<fs type="hd_c_ph">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+<f name="hd_dtr">
+<fs type="sign" />
+</f>
+<f name="non_hd_dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="dtrs">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="19">
+<view>
+<title>hd_fill_ph</title>
+<fs type="hd_fill_ph">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+<f name="hd_dtr">
+<fs type="sign" />
+</f>
+<f name="non_hd_dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="dtrs">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="20">
+<view>
+<title>top_ph</title>
+<fs type="top_ph">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+<f name="hd_dtr">
+<fs type="sign" />
+</f>
+<f name="non_hd_dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="dtrs">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="21">
+<view>
+<title>question</title>
+<fs type="question">
+<f name="phon">
+<ls><items /><tail /></ls>
+</f>
+<f name="loc">
+<fs type="loc" />
+</f>
+<f name="wh">
+<fs type="yes_no" />
+</f>
+<f name="gaps">
+<ls><items /><tail /></ls>
+</f>
+<f name="hd_dtr">
+<fs type="sign" />
+</f>
+<f name="non_hd_dtrs">
+<ls><items /><tail /></ls>
+</f>
+<f name="dtrs">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="22">
+<view>
+<title>loc</title>
+<fs type="loc">
+<f name="syn">
+<fs type="cat" />
+</f>
+<f name="sem">
+<fs type="sem" />
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="23">
+<view>
+<title>cat</title>
+<fs type="cat">
+<f name="pos">
+<fs type="pos" />
+</f>
+<f name="spr">
+<ls><items /><tail /></ls>
+</f>
+<f name="comps">
+<ls><items /><tail /></ls>
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="24">
+<view>
+<title>pos</title>
+<fs type="pos">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="25">
+<view>
+<title>agr_pos</title>
+<fs type="agr_pos">
+<f name="agr">
+<fs type="agr_none" />
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="26">
+<view>
+<title>d</title>
+<fs type="d">
+<f name="agr">
+<fs type="agr_none" />
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="27">
+<view>
+<title>n</title>
+<fs type="n">
+<f name="case">
+<fs type="case" />
+</f>
+<f name="agr">
+<fs type="agr_none" />
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="28">
+<view>
+<title>v</title>
+<fs type="v">
+<f name="aux">
+<fs type="yes_no" />
+</f>
+<f name="vform">
+<fs type="vform" />
+</f>
+<f name="agr">
+<fs type="agr_none" />
+</f>
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="29">
+<view>
+<title>a</title>
+<fs type="a">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="30">
+<view>
+<title>p</title>
+<fs type="p">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="31">
+<view>
+<title>c</title>
+<fs type="c">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="32">
+<view>
+<title>agr_none</title>
+<fs type="agr_none">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="33">
+<view>
+<title>none</title>
+<fs type="none">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="34">
+<view>
+<title>agr</title>
+<fs type="agr">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="35">
+<view>
+<title>thd_sg</title>
+<fs type="thd_sg">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="36">
+<view>
+<title>non_thd_sg</title>
+<fs type="non_thd_sg">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="37">
+<view>
+<title>fst_sg</title>
+<fs type="fst_sg">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="38">
+<view>
+<title>sec_sg</title>
+<fs type="sec_sg">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="39">
+<view>
+<title>fst_pl</title>
+<fs type="fst_pl">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="40">
+<view>
+<title>sec_pl</title>
+<fs type="sec_pl">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="41">
+<view>
+<title>thd_pl</title>
+<fs type="thd_pl">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="42">
+<view>
+<title>case</title>
+<fs type="case">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="43">
+<view>
+<title>subj</title>
+<fs type="subj">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="44">
+<view>
+<title>plain</title>
+<fs type="plain">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="45">
+<view>
+<title>nom</title>
+<fs type="nom">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="46">
+<view>
+<title>obj</title>
+<fs type="obj">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="47">
+<view>
+<title>acc</title>
+<fs type="acc">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="48">
+<view>
+<title>vform</title>
+<fs type="vform">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="49">
+<view>
+<title>fin</title>
+<fs type="fin">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="50">
+<view>
+<title>non_fin</title>
+<fs type="non_fin">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="51">
+<view>
+<title>bare</title>
+<fs type="bare">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="52">
+<view>
+<title>perf</title>
+<fs type="perf">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="53">
+<view>
+<title>prog</title>
+<fs type="prog">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="54">
+<view>
+<title>to_inf</title>
+<fs type="to_inf">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="55">
+<view>
+<title>sem</title>
+<fs type="sem">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="56">
+<view>
+<title>ref</title>
+<fs type="ref">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="57">
+<view>
+<title>living_being</title>
+<fs type="living_being">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="58">
+<view>
+<title>person</title>
+<fs type="person">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="59">
+<view>
+<title>animal</title>
+<fs type="animal">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="60">
+<view>
+<title>thing</title>
+<fs type="thing">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="61">
+<view>
+<title>event</title>
+<fs type="event">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="62">
+<view>
+<title>det_sem</title>
+<fs type="det_sem">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="63">
+<view>
+<title>proposition</title>
+<fs type="proposition">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="64">
+<view>
+<title>location</title>
+<fs type="location">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="65">
+<view>
+<title>direction</title>
+<fs type="direction">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="66">
+<view>
+<title>goal</title>
+<fs type="goal">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="67">
+<view>
+<title>idiom</title>
+<fs type="idiom">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="68">
+<view>
+<title>idiom_it</title>
+<fs type="idiom_it">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="69">
+<view>
+<title>idiom_all</title>
+<fs type="idiom_all">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="70">
+<view>
+<title>idiom_hell</title>
+<fs type="idiom_hell">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="71">
+<view>
+<title>idiom_break</title>
+<fs type="idiom_break">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="72">
+<view>
+<title>idiom_loose</title>
+<fs type="idiom_loose">
+</fs><reentrancies />
+</view>
+</result>
+
+
+<result id="73">
+<view>
+<title>.</title>
+<fs type=".">
+</fs><reentrancies />
+</view>
+</result>
+
+
+</results></root>

@@ -1,0 +1,85 @@
+body {
+    font-family: sans-serif;
+}
+
+table {
+    clear: left
+}
+td {
+    vertical-align: top;
+}
+
+#lexicon {
+    width: 100px;
+    border: 1px solid black;
+    padding-bottom: 5px;
+}
+
+#lex-label, #parse-form-label {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 2px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#parse-form-label {
+    float: left;
+    width: 100px;
+}
+
+#status {
+    float: right;
+}
+
+.lexitem {
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0px 5px 0px 5px
+}
+
+div.lexitem:hover {
+    color: white;
+    background-color: #003399;
+}
+
+#trees {
+
+}
+
+.status-error, .status-pending {
+    color: white;
+    padding: 2px 5px 2px 5px;
+}
+
+.status-pending {
+    background-color: #003399;
+}
+
+.status-error {
+    background-color: red
+}
+
+#parse-and-status {
+}
+
+#parse-form {
+    clear: both;
+}
+
+#selector-bar {
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
+
+.selector {
+    color: white;
+    background-color: #003399;
+    font-family: helvetica;
+    font-weight: bold;
+    /*font-size: 9pt;*/
+    padding: 1px 5px 1px 5px;
+    margin: 2px;
+    cursor: pointer;
+}

@@ -1,0 +1,94 @@
+type_hierarchy
+bot
+   list
+      ne_list hd:bot tl:list
+      e_list
+   bool
+      plus
+      minus
+   sign phon:list synsem:synsem 
+      lexical_sign arg_st:list
+         lexeme
+            noun_lexeme
+            verb_lexeme
+         &word
+      syntactic_sign
+         &word
+         phrase dtrs:list non_hd_dtrs:list
+            headed_ph hd_dtr:sign
+               hd_subj_ph subj_gap:bool
+               hd_spr_ph
+               hd_comp_ph hd_dtr:word
+               sai_ph
+               hd_fill_ph
+                  prepos_ph
+                  mc_subj_ques
+                  mc_sai_ques
+               mod_hd_ph
+               hd_marker_ph
+            non_headed_ph
+   synsem loc:loc non_loc:non_loc
+   cont
+      adj_cont
+      det_cont
+      verb_cont
+      noun_cont
+      prep_cont
+      &none
+   loc cat:cat cont:cont
+   non_loc inher:non_loc_obj to_bind:non_loc_obj
+   non_loc_obj slash:list wh:list
+   cat head:head val:val marking:marking
+   head lex_class:lex_class pred:bool mod:list
+      agr_head agr:agr
+         noun case:case
+         verb vform:vform aux:bool inv:bool
+         det
+      adj
+      prep
+      marker
+   val subj:list spr:list comps:list
+   marking
+      unmarked
+      marked
+         that
+   case
+      plain
+         nom
+         acc
+      poss
+   vform
+      fin
+      non_fin
+         bare
+         inf
+         prog
+         perf
+         pass
+   lex_class
+      misc
+         it
+         by
+         of
+         to
+         there
+      non_pron      
+      pron
+      &none
+   agr per:per num:num
+      third_sg per:third num:sg
+      non_third_sg
+         first_sg per:first num:sg
+         sec_sg per:sec num:sg
+         first_pl per:first num:pl
+         sec_pl per:sec num:pl
+         third_pl per:third num:pl
+   per
+      first
+      sec
+      third
+   num
+      sg
+      pl
+   wh
+.
