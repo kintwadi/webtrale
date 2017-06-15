@@ -22,7 +22,7 @@ trale_server_start(your_port). // 3333 for instance
 ##### ii.) or generate a runnable jar from the project and exectute the following command:
 
 ```
-java -jar /home/tuxedo/GrammarEngineering/webtrale/wt.jar 
+java -jar webtrale/wt.jar 
    --no-auth=true 
    --allow-remote-connections=true 
    --multiuser=true 
