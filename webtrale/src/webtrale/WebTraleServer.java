@@ -33,7 +33,7 @@ public class WebTraleServer {
     public static String __WEBTRALE_HOME = System.getenv("WEBTRALE_HOME");
     public static String __TRALE_SERVER_HOST = "localhost";
     public static int __TRALE_SERVER_PORT = 3333;
-    public static int __SERVER_PORT = 8888;
+    public static int __SERVER_PORT = 9999;
     public static boolean __ALLOW_REMOTE_CONNECTIONS;
     public static boolean __MULTIUSER;
     public static boolean __NO_AUTH;
