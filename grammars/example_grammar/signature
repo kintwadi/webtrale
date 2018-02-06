@@ -1,0 +1,24 @@
+type_hierarchy
+bot
+   sign   comps:list   syntax:syntax   
+      phrase   dtrs:list   
+      word   
+   list   
+      ne_list   tl:list   hd:bot   
+      e_list   
+   vform   
+      fin   
+      nonfin   
+         prp   
+         pfp   
+         base   
+   pos   
+      verb   vform:vform   
+      noun   case:case   
+      s   
+      prep   
+   syntax   head:pos   
+   case   
+      acc   
+      nom   
+.

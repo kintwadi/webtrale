@@ -1,0 +1,241 @@
+table {
+  border-collapse: separate;
+  margin: 0px;
+  padding:0px;
+  font-family:Arial;
+  font-size:9pt;
+}
+
+.nonterminal-node-label, .terminal-node-label {
+  text-align: center;
+  font-weight: bold;
+}
+
+.semanticlabel {
+  text-align: center;
+  color: blue;
+}
+
+.boxed {
+    border: 1px solid black ;
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.nonterminal-node-label {
+  color: black;
+}
+.terminal-node-label {
+  color: brown;
+}
+
+.tree-node-table {
+  /*border: 1px solid blue;*/
+}
+
+.tag, .f-name, .fs-type, .nonterminal-node-label, .terminal-node-label {
+  cursor: pointer;
+}
+
+.fs-otab {
+  font-size: 10pt;
+}
+
+td {
+  padding:0px;
+  margin:0px;
+}
+
+.fs-otab-lbracket, .fs-otab-rbracket {
+  /*font-size:2px;*/
+  width:2px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.fs-otab-lbracket {
+  border-left: 1px solid black;
+}
+
+.fs-otab-rbracket {
+  border-right: 1px solid black;
+}
+
+.species {
+  color: blue;
+}
+
+.fs-type {
+  font-weight: bold;
+  color: darkblue;
+}
+
+.tag {
+  border: 1px solid black;
+  padding: 0px 2px 0px 2px;
+  text-align: center;
+  font-size:8pt;
+  font-weight:bold;
+}
+
+.f-name {
+  padding-right: 4pt;
+  text-transform: uppercase;
+}
+
+.fs-type, .atom, .species {
+  font-style: italic;
+  font-family: times;
+  font-size: 10pt;
+}
+
+.atom {
+  color: red;
+}
+
+.lrs {
+  color: green
+}
+
+.ls {
+  
+}
+
+.ls-bra, .ls-ket {
+  font-weight: bold;
+}
+
+#viewSelector {
+  padding: 3px 4px 3px 4px;
+  z-index:3;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  float: right;
+}
+
+#viewSelectorHolder {
+  position: absolute;
+  left:0px;
+  width: 100%;
+  z-index: 5;
+}
+
+
+.tbutton {
+  color: white;
+  /*background-color: red;*/
+  background-color: #CCCC00;
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 9pt;
+  padding: 1px 5px 1px 5px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+#structureViewHolder {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  visibility: hidden;
+  margin:0;
+  padding:0;
+}
+
+#canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  margin:0;
+  padding:0;
+}
+
+
+
+
+
+
+
+
+
+#parsechart {
+  position: fixed;
+  left:35px;
+  bottom: 25px;
+  width: 95%;
+  border: 3px solid #8AC007;
+}
+
+
+
+#hideparsechartbuttondiv {
+  position: fixed;
+  left:15px;
+  right:15px;
+  bottom: 2px;
+  width: 95%;
+}
+
+
+#parsechartdiv {
+  position: fixed;
+  left:15px;
+  right:15px;
+  bottom: 20px;
+  width: 95%;
+  border: 3px solid #8AC007;
+}
+
+#parseChartTable {
+    font-family: Arial;
+    width: 100%;
+    border-collapse: collapse;
+    text-align:center;
+}
+
+#parseChartTable td, #parseChartTable th {
+    font-size: 1.0em;
+    border: 1px solid #98bf21;
+    padding: 5px 9px 5px 9px;
+}
+
+#parseChartTable th {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #A7C942;
+    color: #ffffff;
+}
+
+#parseChartTable tr td.phrase {
+    color: #000000;
+    background-color: #EAF2D3;
+}
+
+
+#parseChartTable tr td.lex {
+    color: #000000;
+    background-color: #FFF2D3;
+}
+
+
+#parseChartTable tr td.other {
+	border: none;
+}
+
+
+#parseChartTable tr td.bold {	
+     font-size: 1.03em;
+     font-weight: bold;
+    padding: 3px 7px 2px 7px;
+}
+

@@ -1,0 +1,20 @@
+#1. navigate to example_grammar
+cd example_grammar
+
+#2. start Trale
+../Trale/TRALE-latest/trale -sufG
+
+#3. start wtx
+[wtx].
+
+#4. start trale server
+trale_server_start(3333).
+
+#5. start webtrale client
+run WebTraleServer.java
+
+(
+# make sure in WebTraleServer.java the info matches:
+public static int __TRALE_SERVER_PORT = 3333;
+public static int __SERVER_PORT = 8888;
+)

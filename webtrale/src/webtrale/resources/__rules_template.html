@@ -1,0 +1,40 @@
+<html>
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+      <link href="__wt.css" rel="stylesheet" type="text/css"/>
+      <base target="viewpan">
+      <script type="text/javascript">
+      
+      function clickdiv(content) {
+          window.parent.frames["viewpan"].document.body.innerHTML = "<h2>" + content + "</h2>";
+          return true;
+      }
+    </script>
+    </head>
+    <body>
+      <div id="rule-block">
+        
+        <div class="rulelabel" onclick="clickdiv(document.getElementById('div1').innerHTML)">head_specifier_rule</div>
+        <div id="div1" style="display: none;"> head_specifier_rule rule 
+(head_specifier_phrase,
+ syntax:(valence:(specifier:[],
+                  complements:[])),
+ hd_dtr:Hd_dtr,
+ non_hd_dtrs:[Non_hd_dtr],
+ dtrs:[Non_hd_dtr,Hd_dtr])
+===>
+cat> (sign,
+      Non_hd_dtr,
+      syntax:head:Part_of_speech),
+cat> (sign,
+      Hd_dtr,
+      syntax:(valence:(specifier:[Part_of_speech],
+                       complements:[]))).
+        </div>
+        
+        
+        
+        
+      </div>
+    </body>
+</html>
