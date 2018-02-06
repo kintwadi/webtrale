@@ -1,5 +1,6 @@
 # webtrale
-Browser-based UI for TRALE
+Browser-based UI for TRALE 
+Credits to Martin Lasarov who originally developed the tool.
 
 ## Instructions on how to install and run WebTrale
 
