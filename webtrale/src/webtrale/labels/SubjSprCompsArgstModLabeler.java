@@ -51,6 +51,8 @@ public class SubjSprCompsArgstModLabeler {
         labelsMap.put("spr_label", 4);
         labelsMap.put("slash_label", 5);
         labelsMap.put("mod_label", 6);
+        
+        labelsMap.put("vgap_label", 7);
 
     }
     public static String INPUT_HTML = "/home/niko/Desktop/toConvert/input.html";
@@ -277,7 +279,10 @@ public class SubjSprCompsArgstModLabeler {
                             } else if (tdText.startsWith("mod ") && type == 6) {
                                 //System.out.println("6!");
                                 break;
-                            } else {
+                            } else if (tdText.startsWith("vgap ") && type == 7) {
+                                //System.out.println("6!");
+                                break;
+                            }else {
                                 //  System.out.println("One up!");
                                 tofill = tofill.previousElementSibling();
                                 tdText = tofill.text();
@@ -379,6 +384,7 @@ public class SubjSprCompsArgstModLabeler {
          util.removeGertsAnnotation(doc, "spr_label");
          util.removeGertsAnnotation(doc, "arg_st_labels");
          util.removeGertsAnnotation(doc, "mod_label");
+         util.removeGertsAnnotation(doc, "vgap_label");
         
          util.removeGertsAnnotation(doc, "spr_index");
          util.removeGertsAnnotation(doc, "subj_index");

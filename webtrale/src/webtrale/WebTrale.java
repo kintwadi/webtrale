@@ -218,7 +218,7 @@ public class WebTrale {
 
         String jarStartPath = System.getProperty("user.dir");
         
-        if(!jarStartPath.contains("tuxedo")) {
+        if(!jarStartPath.contains("tomcat7")) {
             jarStartPath = jarStartPath + "/../grammars/example_grammar/";
         }
         
@@ -448,7 +448,7 @@ public class WebTrale {
     synchronized byte[] signatureToHtmlByteArray() throws FileNotFoundException {
         // Convert signature to xml for each type.
         String jarStartPath = System.getProperty("user.dir");
-         if(!jarStartPath.contains("tuxedo")) {
+         if(!jarStartPath.contains("tomcat7")) {
             jarStartPath = jarStartPath + "/../grammars/example_grammar/";
         }
         String signaturePath = jarStartPath + "/signature";
@@ -516,7 +516,7 @@ public class WebTrale {
         String testitemspath =  "test_items.pl";
         
         String jarStartPath = System.getProperty("user.dir");
-         if(!jarStartPath.contains("tuxedo")) {
+         if(!jarStartPath.contains("tomcat7")) {
             testitemspath = "/../grammars/example_grammar/test_items.pl";
         }
         

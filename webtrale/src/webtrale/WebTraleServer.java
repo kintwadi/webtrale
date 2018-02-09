@@ -171,7 +171,7 @@ class WebTraleServlet extends HttpServlet {
     String _sessionId;
     Cache _cache = new Cache(WebTraleServer.__MAX_CACHE_ITEMS);
     TreeSet<String> typesFromSignature = getTypesFromSignature("signature");
-    private boolean MODIFY_NODE_LABELS_ACCORDING_TO_GERTS_REQUIREMENTS = false;
+    private boolean MODIFY_NODE_LABELS_ACCORDING_TO_GERTS_REQUIREMENTS = true;
     private boolean PRINT_HTML = false;
 
     // Read in all signature types which are allowed to be constraints.
@@ -180,7 +180,7 @@ class WebTraleServlet extends HttpServlet {
         // This is the path from which the jar file is started!
         String jarStartPath = System.getProperty("user.dir");
         System.out.println(jarStartPath);
-         if(!jarStartPath.contains("tuxedo")) {
+         if(!jarStartPath.contains("tomcat7")) {
              jarStartPath = jarStartPath + "/../grammars/example_grammar/";
          }
         
