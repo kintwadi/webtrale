@@ -92,7 +92,8 @@ public class NodeLabelsChanger {
                     // do nothing.
                 } else {
                     tOrNTNode.append("<br>");
-                    tOrNTNode.append("<div class=\"semanticlabel\">" + sem + "</div>");
+                    // hide it by default.
+                    tOrNTNode.append("<div class=\"semanticlabel\" style=\"display:none\">" + sem + "</div>");
                     tOrNTNode.append("</div>");
                 }
             }
