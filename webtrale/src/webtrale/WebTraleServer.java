@@ -31,8 +31,14 @@ public class WebTraleServer {
     
 
     public static String __WEBTRALE_HOME = System.getenv("WEBTRALE_HOME");
-    public static String __TRALE_SERVER_HOST = "localhost";
+    // Set to localhost if you have the sicstus and trale installation locally on your machine.
+    //public static String __TRALE_SERVER_HOST = "localhost";
+    // Specify the server domain here if sicstus and trale run elsewhere.
+    // The following URL points to trale.server.uni-frankfurt.de
+    public static String __TRALE_SERVER_HOST = "141.2.159.95";
     public static int __TRALE_SERVER_PORT = 3333;
+    
+    // interface URL: e.g., http://127.0.0.1:9999/wt/
     public static int __SERVER_PORT = 9999;
     public static boolean __ALLOW_REMOTE_CONNECTIONS;
     public static boolean __MULTIUSER;
@@ -171,7 +177,7 @@ class WebTraleServlet extends HttpServlet {
     String _sessionId;
     Cache _cache = new Cache(WebTraleServer.__MAX_CACHE_ITEMS);
     TreeSet<String> typesFromSignature = getTypesFromSignature("signature");
-    private boolean MODIFY_NODE_LABELS_ACCORDING_TO_GERTS_REQUIREMENTS = true;
+    private boolean MODIFY_NODE_LABELS_ACCORDING_TO_GERTS_REQUIREMENTS = false;
     private boolean PRINT_HTML = false;
 
     // Read in all signature types which are allowed to be constraints.

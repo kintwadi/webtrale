@@ -523,10 +523,10 @@ public class Utils {
             // new versions separate by "," old ones by ":" in the label modification by Gerald.
 
                //new: with treelabel version.
-                String ruleName = anAnalysis.substring(anAnalysis.indexOf("<tree label=\"") + 13, anAnalysis.indexOf(",")); // was ":" before
+              //  String ruleName = anAnalysis.substring(anAnalysis.indexOf("<tree label=\"") + 13, anAnalysis.indexOf(",")); // was ":" before
 
                 // old:     
-              //  String ruleName = anAnalysis.substring(anAnalysis.indexOf("<tree label=\"") + 13, anAnalysis.indexOf(":")); // was ":" before
+                String ruleName = anAnalysis.substring(anAnalysis.indexOf("<tree label=\"") + 13, anAnalysis.indexOf(":")); // was ":" before
 
         
              
