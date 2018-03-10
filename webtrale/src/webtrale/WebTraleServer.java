@@ -655,17 +655,11 @@ class WebTraleServlet extends HttpServlet {
             
 
         } else if ("words".equals(method)) {
-            
             bytes = _wt.wordsToXmlByteArray();
-            
             //System.out.println("bytes (3): ");
         } // Called when the program is initialized. (loaded at the beginning?) yes.
         else if ("words.html".equals(method)) {
-            
             bytes = _wt.wordsToHtmlByteArray();
-            
-            
-            
             //System.out.println("bytes (4): ");
         } else if ("__testitems.html".equals(method)) {
             bytes = _wt.testitemsToHtmlByteArray();
@@ -755,13 +749,12 @@ class WebTraleServlet extends HttpServlet {
         return q;
     }
 
-    //Antonio's note here
     boolean sendIndex(HttpServletResponse response)
             throws Exception {
         if (WebTraleServer.__MULTIUSER) {
-            return sendResource("_index.html", response);
+            return sendResource("/_index.html", response);
         }
-       return sendResource("/index1.html", response);
+        return sendResource("/_index-local.html", response);
     }
 
     static String normalize(String s) {

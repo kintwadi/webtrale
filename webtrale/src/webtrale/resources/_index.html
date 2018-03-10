@@ -1,127 +1,34 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>UI for TRALE</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--<link rel="stylesheet" href="reso/css/bootstrap.min.css">-->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-         <script src="reso/js/bootstrap.min.js"></script>-->
-
-        <!--<link rel="stylesheet" href="sample.css"> -->
-        <link href="__wt.css" rel="stylesheet" type="text/css"/>
-        <link href='https://fonts.googleapis.com/css?family=Astloch' rel='stylesheet'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-        <base target="viewpan"/>
-     
-    </head>
-    <body  >
-        <br>
-        <!---&#9776;-->
-
-        <span class="left_open glyphicon glyphicon-hand-left"  onmouseover="openNavLeft()">
-           <!-- <img src="__run1.gif" class="img-fluid" style=" width:50px;height:50px" alt="click">-->
-        </span>
-        <!--<span class="top_open glyphicon glyphicon-menu-down " ></span>
-        <span class="bottom_open glyphicon glyphicon-menu-up " onmouseover="openNavBottom()"></span>
-        -->
-        <div id="left_sidenav" class="left_sidenav" style="">
-
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNavLeft()">&times;</a>
-
-            <div class="left_content" >
-
-                <form  action="rec" onsubmit="_onsubmit()" class="navbar-form " role="search" >
-
-                    <input type="text" class="form-control" id="q" name="q" accesskey="s"  placeholder="Search for sentences" style="width: 100%">
-                    <input type="text" class="form-control" id="constraint" name="constraint" size="10" placeholder="Add constraints(optional)" style="width: 100%">
-                    </br></br>
-                    <button type="submit" class="btn btn-info" id="rec-submit"  onclick="closeNavLeft()" class="label" value="Parse" style="width: 100%; background-color: #004165;border-color:#004165;font-family: 'Tangerine';font-size: 22px; " >Parse</button>
-
-                </form>
-                <br><br>
-
-                <div >
-
-
-                    
-                    <fieldset>
-                        <!--<button type="submit" id="semantics"class="btn btn-info" style="width: 100%;background-color: #004165;border-color:#004165" onclick="semanticsCase()" style="width: 100%; background-color: #004165;border-color:#004165 ">Semantic Labels</button>-->
-                        <div class="onoffswitch" style="margin: auto">
-                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                            
-                            <label class="onoffswitch-label" for="myonoffswitch">
-                                <span class="onoffswitch-inner" style="height: 30px"></span>
-                                <span class="onoffswitch-switch" style="height: 20px"></span>
-                            </label>
-                        </div>
-                        <legend style="text-align: center; color:white;font-family: 'Tangerine';font-size: 22px;">Semantic Labels</legend>
-                        </fieldset>
-
-                    
-                    <br><br>
-                    <fieldset><legend style="text-align: center; color:white"></legend>
-
-                        <button type="submit" id="items" class="btn btn-info" style="width: 100%; background-color: #02111b;border-color:#004165;font-family: 'Tangerine';font-size: 22px;" onclick="modalEvent()" >Test Items</button>
-
-                    </fieldset>
-                    <br>
-                    <fieldset disabled >
-                        <button type="submit" id="hierarchy"class="btn btn-info" style="width: 100%; font-family: 'Tangerine';font-size: 22px;" onclick="hierarchyCase()">Type Hierarchy</button>
-
-                    </fieldset>
-
-
-                </div>
-
-            </div>
-            <div>
-                <h6 class="list-group-item disabled" style="text-align: center;font-family: 'Tangerine';font-size: 22px;">Lexicon</h6>
-                <!--<a href="#" class="list-group-item">dynamic listing</a>-->
-                <object type="text/html"  class="obj" data="words.html"style="width:100%; height:100%; background-color: ">
-
-                </object>
-                
-        
-
-            </div>
-
-        </div>
-
-        <!--- main content -->
-        <div id="main" class="span10" onmouseout="closeNavLeft()" >
-
-            <!--<div id="tree"><h5 class="syntax  " >Syntax tree</h5></div>-->
-
-
-            <iframe name="viewpan" class="shadowbox" onmouseout="closeNavLeft()" style="font-size: 15px;"></iframe> 
-
-
-        </div>
-
-        <!--Modal-->
-        <div id="items_myModal" class="modal">
-            <!--modal content-->
-            <div class="items_modal_content">
-                <!--<span class="items_close" onclick="closeModal()">&times;</span>-->
-
-                <object type="text/html" class ="modaltest" data="__testitems.html"style="width:100%; height:100%;">
-
-                </object>
-
-            </div>
-
-
-        </div>
-       
-        <script src="__script.js"></script> 
-    </body>
-</html> 
+<html>
+  <head>
+    <title>WebTRALE</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript">
+      window._wt_flag_islocal = 0;
+    </script>
+  </head>
+ <!-- <frameset cols="260px,*" >
+    <frameset rows="130px,*">
+      <frame src="__rec-itf.html"/>
+      <frame src="words.html" />
+    </frameset>
+    <frame name="viewpan"/>
+  </frameset>
+ -->
+<frameset cols="250,*">
+   <frameset rows="*,70%,0%">
+      <frame src="__rec-itf.html"  />
+      <frame src="words.html" />
+    <!--  <frame src="__rules.html"/> -->
+    </frameset>
+   <frameset rows="0%,*,4%" name='threemainframes'>
+        <frameset cols="*, 200" name="signatureFrameSet">
+            <frame src="__type_hierarchy_d3.html" name="typehierarchyd3">
+            <frame src="__signature.html" name="signatureavms" > 
+        </frameset>
+      <frame name="viewpan" frameborder="0"/>
+      <frame src="__testitems.html" frameborder="1" /> 
+   </frameset>
+  <!-- <frame src="rechts.html" name="rechts" /> -->
+</frameset>
+  
+</html>
