@@ -81,6 +81,7 @@ public class WebTrale {
         }
 
         sb.append("</words>");
+        
 
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream(sb.length());
@@ -172,7 +173,7 @@ public class WebTrale {
         }
         sb.append(footer);
 
-
+       
         return sb.toString().getBytes();
 
     }
@@ -648,6 +649,8 @@ public class WebTrale {
         }
 
         sb.append("</words>");
+        System.out.println("aquiii");
+        System.out.println(sb.toString());
 
         try {
             Transformer t = loadStylesheet(TransformerFactory.newInstance(),
@@ -656,6 +659,7 @@ public class WebTrale {
             t.transform(
                     new SAXSource(new InputSource(new StringReader(sb.toString()))),
                     new StreamResult(baos));
+            
             return baos.toByteArray();
         } catch (Exception e) {
             throw new RuntimeException(e);
