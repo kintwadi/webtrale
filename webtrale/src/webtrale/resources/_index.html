@@ -20,7 +20,20 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <link rel="stylesheet" href="__normalize.min.css">
+        <link rel="stylesheet" href="__animate.min.css">
+        <style>
+            #btn-close-modal {
+                width:100%;
+                text-align: center;
+                cursor:pointer;
+                color:#fff;
+            }
+
+        </style>
+        
         <base target="viewpan"/>
+        
      
     </head>
     <body  >
@@ -70,16 +83,14 @@
                     <br><br>
                     <fieldset><legend style="text-align: center; color:white"></legend>
 
-                        <button type="submit" id="items" class="btn btn-info" style="width: 100%; background-color: #02111b;border-color:#004165;font-family: 'Tangerine';font-size: 22px;" onclick="modalEvent()" >Test Items</button>
+                        <button type="submit" id="items" class="btn btn-info" style="width: 100%; background-color: #02111b;border-color:#004165;font-family: 'Tangerine';font-size: 22px;" ><a id ="demo01" href="#animatedModal">Test Items</a></button>
 
                     </fieldset>
                     <br>
-                    <fieldset disabled >
-                        <button type="submit" id="hierarchy"class="btn btn-info" style="width: 100%; font-family: 'Tangerine';font-size: 22px;" onclick="hierarchyCase()">Type Hierarchy</button>
+                    <fieldset >
+                        <button type="submit"class="btn btn-info" style="width: 100%; font-family: 'Tangerine';font-size: 22px;" ><a id ="demo02" href="#modal-02">Type Hierarchy</a></button>
 
                     </fieldset>
-
-
                 </div>
 
             </div>
@@ -121,6 +132,66 @@
 
 
         </div>
+        <!-- new modals --->
+        
+        <!--__signature.html-->
+        <div id="animatedModal">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal glyphicon glyphicon-remove-circle"> 
+               
+            </div>
+                
+            <div class="modal-content">
+                <object type="text/html" class ="modaltest" data="__type_hierarchy_d3.html"style="width:100%; height:100%;">
+
+                </object>
+            </div>
+        </div>
+
+        <!--__type_hierarchy_d3.html-->
+        <div id="modal-02">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-02 glyphicon glyphicon-remove-circle"> 
+                
+            </div>
+            
+            <div class="modal-content">
+                <object type="text/html" class ="modaltest" data="__testitems.html"style="width:100%; height:100%;">
+
+                </object>
+            </div>
+        </div>
+
+
+        <script src="__jquery.min.js"></script>
+        <script src="__animatedModal.min.js"></script>
+        <script>
+
+            //demo 01 basic
+            $("#demo01").animatedModal();
+
+            //demo 02 configured
+            $("#demo02").animatedModal({
+                modalTarget:'modal-02',
+                animatedIn:'lightSpeedIn',
+                animatedOut:'bounceOutDown',
+                color:'#3498db',
+                // Callbacks
+                beforeOpen: function() {
+                    console.log("The animation was called");
+                },           
+                afterOpen: function() {
+                    console.log("The animation is completed");
+                }, 
+                beforeClose: function() {
+                    console.log("The animation was called");
+                }, 
+                afterClose: function() {
+                    console.log("The animation is completed");
+                }
+            });
+
+        </script>
        
         <script src="__script.js"></script> 
     </body>

@@ -29,7 +29,11 @@
             height: 100%;
           }
           
-          ::-webkit-scrollbar {width: 8px; height: 1px; background: #CD5C5C;}
+          ::-webkit-scrollbar {
+          
+              width: 8px; height: 1px; background: #CD5C5C;
+          
+          }
           ::-webkit-scrollbar-thumb {background-color:#ffffff ; border: 8px solid black;border-radius: 45px;}
  
  
