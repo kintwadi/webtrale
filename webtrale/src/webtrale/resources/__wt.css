@@ -235,6 +235,8 @@ span{
     padding-top: 60px;
     background-color: #02111b;
     
+    
+    
 }
 
 .left_content{
@@ -374,7 +376,7 @@ th{
 from here
 */
     .onoffswitch {
-        position: relative; width: 30%;
+        position: relative; width: 35%;
         height: 5px;
         -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
     }
@@ -391,7 +393,7 @@ from here
     }
     .onoffswitch-inner:before, .onoffswitch-inner:after {
         display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-        font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        font-size: 10px; color: white; font-family: Tangerine, Arial, sans-serif; font-weight: bold;
         box-sizing: border-box;
     }
     .onoffswitch-inner:before {
@@ -405,7 +407,7 @@ from here
         padding-right: 30px;
         background-color: #EEEEEE; color: #999999;
         text-align: right;
-        font-family: 'Tangerine';font-size: 12px;
+        font-family: 'Tangerine';font-size: 10px;
     }
     .onoffswitch-switch {
         display: block; width: 18px; margin: 6px;
@@ -430,8 +432,9 @@ from here
   .bottom_sidenav a {font-size: 18px;}
 }
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Tangerine", sans-serif;
     transition: background-color .5s;
+  
     /*font-family: 'Tangerine';font-size: 22px;*/
 }
 

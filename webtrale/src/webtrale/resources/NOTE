@@ -2,7 +2,7 @@ AUTHOR: ANTONO MABIALA
 date: 03.2018
 working hours: 
 March: 17h -- coding, 1h -- skype call ;
-left hours 2h: March + 3h February: Sum: 5h left
+left hours 2h: March + 3h February: Sum: 5-2 h left
 
 ------taskList-------
 March:
@@ -15,7 +15,11 @@ March:
 6. remove unnecessary files
 7. push changes to git rep
 8. create a modal for the __type_hierarchy_d3.html file
-9. create a modal for the __signature.html file (to do)
+9. create a modal for the __signature.html file 
+10. remove index.* files that are not necessary
+11. comment on code. Script.js / format code.
+12.test items in green, type hierarchy in  yellow.
+13. push branch to my repository.
 
 
 
