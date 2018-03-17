@@ -761,7 +761,7 @@ class WebTraleServlet extends HttpServlet {
         if (WebTraleServer.__MULTIUSER) {
             return sendResource("_index.html", response);
         }
-       return sendResource("/_index.html", response);
+       return sendResource("/index1.html", response);
     }
 
     static String normalize(String s) {
