@@ -1,5 +1,4 @@
 
-document.write('<script src="__animatedModal.min.js" type="text/javascript"></script>');
 
   function openNavLeft() {
     document.getElementById("left_sidenav").style.width = "250px";
