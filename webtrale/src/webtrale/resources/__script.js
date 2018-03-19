@@ -3,7 +3,7 @@
     Author: Antonio Mabiala
     antmabiala@gmail.com
 */
-// open the hiden left slide navegation bar
+// open the hiden left slide navigation bar
 
   function openNavLeft() {
     document.getElementById("left_sidenav").style.width = "250px";
@@ -11,7 +11,7 @@
     document.body.style.backgroundColor = "#FFFFFF";
   }
 
-// close the hiden left navegation bar 
+// close the hiden left navigation bar 
   function closeNavLeft() {
     document.getElementById("left_sidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
