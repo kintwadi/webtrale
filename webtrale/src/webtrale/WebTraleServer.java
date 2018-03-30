@@ -758,10 +758,10 @@ class WebTraleServlet extends HttpServlet {
     //Antonio's note here
     boolean sendIndex(HttpServletResponse response)
             throws Exception {
-        if (WebTraleServer.__MULTIUSER) {
-            return sendResource("_index.html", response);
-        }
-       return sendResource("/_index.html", response);
+        //if (WebTraleServer.__MULTIUSER) {
+            return sendResource("/index.html", response);
+        //}
+       //return sendResource("/_index.html", response);
     }
 
     static String normalize(String s) {
